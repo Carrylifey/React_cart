@@ -19,7 +19,7 @@ class CartItem extends React.Component {
     // this.setState({
     //   qty:this.state.qty +1
     // })
-    //set State 2 
+    //set State 2  - if prevstate required use this
     this.setState((prevState)=>{
         return{
           qty:prevState.qty+1
@@ -27,7 +27,7 @@ class CartItem extends React.Component {
     });
   }
     
-    
+    //decreasing the quantiyty
     decreaseQty =() =>{
       const{qty}= this.state;
       if (qty===0){
@@ -47,7 +47,7 @@ class CartItem extends React.Component {
     return (
       <div className="cart-item">
         <div className="left-block">
-          <img alt='some value' style ={styles.image} />
+          <img alt="" style ={styles.image} />
         </div>
         <div className="right-block">
           <div style={ { fontSize: 25 } }>{title}</div>
@@ -74,7 +74,7 @@ class CartItem extends React.Component {
 
 const styles = {
   image: {
-    height: 110,
+    height: 120,
     width: 110,
     borderRadius: 5,
     background: 'grey'
